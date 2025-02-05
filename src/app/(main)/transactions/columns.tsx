@@ -16,6 +16,7 @@ export const columns: TypedColumnDef<Transaction>[] = [
   {
     accessorKey: "amount",
     header: "Amount",
+    accessorFn: (row) => `${row.amount} USD`,
   },
   {
     accessorKey: "status",
