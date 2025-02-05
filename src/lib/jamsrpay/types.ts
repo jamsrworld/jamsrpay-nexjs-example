@@ -10,6 +10,6 @@ export type CreatePaymentResponse = {
 export type CreatePaymentInput = {
   amount: number;
   orderId: string;
-  successUrl: string;
-  cancelUrl: string;
+  successUrl?: string;
+  cancelUrl?: string;
 };

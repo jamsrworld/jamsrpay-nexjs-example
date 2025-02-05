@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
+    "@jamsr-ui/next": "^0.1.0",
     "@jamsr-ui/react": "0.1.0",
     "@prisma/client": "6.3.1",
     "@tailwindcss/postcss": "^4.0.1",

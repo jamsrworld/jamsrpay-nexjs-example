@@ -72,7 +72,10 @@ export class Jamsrpay {
    * @param payload The JSON payload to send in the webhook.
    * @param secretKey The merchant's secret key.
    */
-  static generateSignature(payload: unknown, secretKey: string): string {
+  private static generateSignature(
+    payload: unknown,
+    secretKey: string
+  ): string {
     const hmac = crypto.createHmac("sha256", secretKey);
     const payloadString = JSON.stringify(payload);
     hmac.update(payloadString);
@@ -91,6 +94,8 @@ export class Jamsrpay {
     secretKey: string
   ): boolean {
     const generatedSignature = this.generateSignature(payload, secretKey);
+    console.log("generatedSignature:->", generatedSignature);
+    console.log("receivedSignature:->", receivedSignature);
     return crypto.timingSafeEqual(
       Buffer.from(receivedSignature),
       Buffer.from(generatedSignature)

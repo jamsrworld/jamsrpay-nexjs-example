@@ -1,7 +1,6 @@
-import { ToastProvider, UIProvider } from "@jamsr-ui/react";
+import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,11 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark h-full flex flex-col">
-      <body className={`${geistSans.variable} ${geistMono.variable} grow`}>
-        <UIProvider>
-          <ToastProvider />
-          {children}
-        </UIProvider>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} flex flex-col grow px-4`}
+      >
+        {children}
       </body>
     </html>
   );
