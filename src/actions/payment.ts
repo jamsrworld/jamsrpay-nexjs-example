@@ -9,7 +9,10 @@ export const createPayment = async (data: CreatePaymentFormValues) => {
   try {
     const { amount } = data;
     const ENVIRONMENT: JamsrPayConfig["ENVIRONMENT"] = "test";
-    const API_KEY = "JRHTABNB-WAFMAOQS-EMTKBQMR-3HLOTCGI";
+    const API_KEY = process.env.API_KEY;
+    if (!API_KEY) {
+      throw new Error("API_KEY is not set in env");
+    }
     const jamsrpay = new Jamsrpay({ API_KEY, ENVIRONMENT });
 
     // create transaction

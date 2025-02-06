@@ -21,7 +21,11 @@ const bodyValidator = object({
 
 export const POST = async (req: Request) => {
   try {
-    const WEBHOOK_SECRET = "bvSv2SNHpumlCKiZKY_dATvxJTEPTdrR";
+    // paste your webhook secret here
+    const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
+    if (!WEBHOOK_SECRET) {
+      throw new Error("WEBHOOK_SECRET is not set in env");
+    }
 
     const receivedSignature = req.headers.get("x-jamsrpay-signature");
     const receivedTimestamp = req.headers.get("x-jamsrpay-timestamp");
