@@ -32,7 +32,7 @@ Before setting up JamsrPay, ensure you have the following:
    DATABASE_URL=postgresql://user:password@localhost:5432/JamsrPay
    SECRET_KEY="your-secret-key"
    ```
-Create Webhook on JamsrPay https://jamsrpay-app-sandbox.jamsrworld.com
+Create Webhook on JamsrPay https://sandbox.jamsrpay.com
 
 **Start the development server**
 
@@ -55,8 +55,8 @@ ngrok http 3000
    ```
 
 **Test Coin**
-https://shasta.tronex.io/
 
+https://nileex.io/join/getJoinPage
 
 ## Support
 
