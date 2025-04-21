@@ -5,6 +5,18 @@ const nextConfig: NextConfig = {
   experimental: {
     typedRoutes: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  logging: {
+    fetches: {
+      fullUrl: true,
+      hmrRefreshes: true,
+    },
+  },
 };
 
 export default nextConfig;

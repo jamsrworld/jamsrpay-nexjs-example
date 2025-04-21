@@ -37,9 +37,15 @@
   },
   "pnpm": {
     "ignoredBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "prisma",
       "sharp"
     ],
     "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "prisma",
       "sharp"
     ]
   }

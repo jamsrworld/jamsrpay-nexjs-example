@@ -17,14 +17,14 @@ export class Jamsrpay {
 
   private getApiBaseUrl() {
     return this.ENVIRONMENT === "test"
-      ? "https://jamsrpay-api-sandbox.jamsrworld.com/web"
-      : "https://jamsrpay-api.jamsrworld.com/web";
+      ? "https://api-sandbox.jamsrpay.com/web"
+      : "https://api.jamsrpay.com/web";
   }
 
   private getAppBaseUrl() {
     return this.ENVIRONMENT === "test"
-      ? "https://jamsrpay-sandbox.jamsrworld.com"
-      : "https://jamsrpay.jamsrworld.com";
+      ? "https://sandbox.jamsrpay.com"
+      : "https://jamsrpay.com";
   }
 
   private getCreatePaymentUrl() {
